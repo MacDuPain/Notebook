@@ -2,23 +2,36 @@ import React, { useState } from 'react';
 
 const MarkdownInput = ({ onSave }) => {
     const [markdownText, setMarkdownText] = useState('');
+    const [noteTitle, setNoteTitle] = useState('');
 
-    // Fonction pour mettre à jour la valeur du textarea
     const handleChange = (e) => {
         setMarkdownText(e.target.value);
     };
 
-    // Fonction pour appeler la callback onSave lors de la sauvegarde
+    const handleTitleChange = (e) => {
+        setNoteTitle(e.target.value);
+    };
+
     const handleSave = () => {
-        onSave(markdownText); // Cette fonction va faire le console.log dans la première étape
+        if (noteTitle && markdownText) { 
+            onSave({ markdownText, noteTitle });
+            setMarkdownText('');
+            setNoteTitle('');
+        }
     };
 
     return (
         <div>
+            <input
+                type="text"
+                value={noteTitle}
+                onChange={handleTitleChange}
+                placeholder="Titre de la note"
+            />
             <textarea
                 value={markdownText}
                 onChange={handleChange}
-                placeholder="Write your markdown here..."
+                placeholder="Contenu de la note"
             />
             <button onClick={handleSave}>Save</button>
         </div>

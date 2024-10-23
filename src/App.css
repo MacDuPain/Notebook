@@ -16,28 +16,6 @@ body {
   padding: 20px;
 }
 
-.sidebar {
-  width: 30%;
-  background-color: #151515;
-  padding: 20px;
-}
-
-.sidebar button {
-  background-color: #d10000;
-  color: white;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.sidebar button:hover {
-  background-color: #ff3333;
-}
-
 .note-item {
   color: #d10000;
   font-weight: bold;
@@ -54,7 +32,6 @@ body {
   color: #ff3333;
 }
 
-/* Contenu de la note */
 .note-content {
   width: 70%;
   padding: 20px;
@@ -108,3 +85,84 @@ body {
 .note-content button:hover {
   background-color: #ff3333;
 }
+
+input {
+  background-color: #727272; 
+  border: 1px solid #727272; 
+  border-radius: 0; 
+  width: 100%; 
+  padding: 10px; 
+  box-sizing: border-box; 
+  resize: none; 
+  margin-bottom: 10px;
+  color: white; 
+}
+
+textarea {
+  background-color: #727272;
+  border: 1px solid #727272; 
+  border-radius: 0; 
+  width: 100%; 
+  height: 200px; 
+  padding: 10px; 
+  box-sizing: border-box; 
+  resize: none; 
+  margin-bottom: 10px; 
+  color: white;
+}
+
+
+input:focus, textarea:focus {
+  background-color: #9b9b9b; 
+  outline: none; 
+}
+
+button {
+  background-color: red;
+  color: white;
+  border: none; 
+  padding: 10px 15px; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+
+button:hover {
+  background-color: darkred; 
+}
+
+.container {
+  display: flex; 
+  height: 100vh; 
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e; 
+  padding: 15px; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  border-right: 2px solid #ffffff; 
+}
+
+.note-title {
+  color: #d10000; 
+  margin: 0; 
+  font-size: 1.1em; /
+}
+
+.sidebar ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.sidebar li {
+  cursor: pointer; 
+  padding: 10px; 
+}
+
+.sidebar li:hover {
+  background-color: #9b9b9b; 
+}
+
+

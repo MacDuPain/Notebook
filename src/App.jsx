@@ -1,24 +1,36 @@
+// App.jsx
 import React, { useState } from 'react';
 import MarkdownInput from './MarkdownInput';
 import NoteDisplay from './NoteDisplay';
+import Sidebar from './Sidebar';
 import './App.css';
 
 const App = () => {
-  // Utilise un tableau pour stocker plusieurs notes
   const [notes, setNotes] = useState([]);
+  const [selectedNoteIndex, setSelectedNoteIndex] = useState(null);
 
   const handleSaveNote = (newNote) => {
-    // Ajoute la nouvelle note au tableau des notes
+    console.log('New note saved:', newNote);
     setNotes((prevNotes) => [...prevNotes, newNote]);
+    setSelectedNoteIndex(null); 
+  };
+
+  const handleSelectNote = (index) => {
+    setSelectedNoteIndex(index); 
   };
 
   return (
-    <div>
-      {/* Affiche chaque note sauvegardée dans un composant NoteDisplay */}
-      {notes.map((note, index) => (
-        <NoteDisplay key={index} markdownValue={note} />
-      ))}
-      <MarkdownInput onSave={handleSaveNote} />
+    <div className="container">
+      <Sidebar notes={notes} onSelectNote={handleSelectNote} /> 
+      <div className="main-content">
+        {selectedNoteIndex !== null && (
+          <NoteDisplay
+            noteTitle={notes[selectedNoteIndex].noteTitle}
+            markdownValue={notes[selectedNoteIndex].markdownText}
+          />
+        )}
+        <MarkdownInput onSave={handleSaveNote} />
+      </div>
     </div>
   );
 };
