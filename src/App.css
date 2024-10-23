@@ -11,9 +11,16 @@ body {
 .main-container {
   display: flex;
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  height: 100vh;
+}
+
+.main-content {
+  padding-left: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 40px;
 }
 
 .note-item {
@@ -33,14 +40,14 @@ body {
 }
 
 .note-content {
-  width: 70%;
-  padding: 20px;
+  padding: 20px; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .note-content h1 {
-  color: #d10000;
-  font-size: 24px;
-  margin-bottom: 20px;
+  margin-top: 0; 
 }
 
 .note-content p {
@@ -142,7 +149,8 @@ button:hover {
   background-color: #1e1e1e; 
   padding: 15px; 
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
-  border-right: 2px solid #ffffff; 
+  border-right: 1px solid #ffffff; 
+  height: auto; 
 }
 
 .note-title {
@@ -165,4 +173,18 @@ button:hover {
   background-color: #9b9b9b; 
 }
 
+.new-note-button {
+  background-color: #d10000;
+  color: white;
+  width: 100%; 
+  padding: 10px;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-bottom: 15px; 
+}
+
+.new-note-button:hover {
+  background-color: #ff3333; 
+}
 
