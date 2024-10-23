@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import MarkdownInput from './MarkdownInput';
 import NoteDisplay from './NoteDisplay';
+import './App.css';
 
 const App = () => {
   const [notes, setNotes] = useState([]);
