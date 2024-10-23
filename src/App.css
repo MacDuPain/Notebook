@@ -1,0 +1,110 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #151515;
+  padding: 20px;
+}
+
+.sidebar button {
+  background-color: #d10000;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar button:hover {
+  background-color: #ff3333;
+}
+
+.note-item {
+  color: #d10000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.note-item p {
+  font-size: 14px;
+  color: #a6a6a6;
+}
+
+.note-item:hover {
+  color: #ff3333;
+}
+
+/* Contenu de la note */
+.note-content {
+  width: 70%;
+  padding: 20px;
+}
+
+.note-content h1 {
+  color: #d10000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.note-content p {
+  font-size: 16px;
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+
+.note-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #3d3d3d;
+  border: none;
+  color: #f5f5f5;
+}
+
+.note-content textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  background-color: #3d3d3d;
+  border: none;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+}
+
+.note-content textarea::placeholder {
+  color: #888;
+}
+
+.note-content button {
+  background-color: #d10000;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-content button:hover {
+  background-color: #ff3333;
+}
